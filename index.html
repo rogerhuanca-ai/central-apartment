@@ -3,13 +3,26 @@
 
 <head>
 
+<meta property="og:title" content="Central Apartment Santa Cruz de la Sierra">
+<meta property="og:description" content="Modern apartment in Santa Cruz de la Sierra, Bolivia. Perfect for business or vacation stays.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="imagenes/apartment1.jpg">
+
+<meta name="description" content="Central Apartment Santa Cruz. Modern holiday apartment in the heart of Santa Cruz. Comfortable stay close to restaurants, shops and city attractions.">
+
+<meta name="keywords" content="apartment santa cruz, holiday apartment santa cruz, apartment tenerife santa cruz, central apartment santa cruz">
+
+<meta name="author" content="Central Apartment Santa Cruz">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Central Apartment Santa Cruz | Holiday Apartment</title>
+<title>Central Apartment Santa Cruz de la Sierra | Holiday Apartment Bolivia</title>
 
-<meta name="description" content="Central Apartment Santa Cruz - Modern holiday apartment in the heart of Santa Cruz.">
-<meta name="keywords" content="apartment santa cruz, holiday apartment santa cruz, vacation rental santa cruz">
+<meta name="description" content="Central Apartment Santa Cruz de la Sierra. Modern holiday apartment in the heart of Santa Cruz, Bolivia. Comfortable stay close to restaurants, shopping and city attractions.">
+<meta name="keywords" content="apartment santa cruz de la sierra, holiday apartment bolivia, apartment santa cruz bolivia, central apartment santa cruz">
 
 <link rel="stylesheet" href="css/styless.css">
 
@@ -46,15 +59,21 @@
 
 <div class="hero-content">
 
+<h1>Central Apartment Santa Cruz</h1>
+
 <h2>Your stay in the heart of the city</h2>
 
 <p>Modern apartment located in Santa Cruz city center.</p>
 
-<a href="https://wa.me/59179974814?text=Hello%20I%20want%20to%20book%20Central%20Apartment%20Santa%20Cruz" target="_blank">
+<div class="hero-buttons">
 
-<button>Book Now</button>
+<a href="#availability" class="btn-primary">Check Availability</a>
 
+<a href="https://wa.me/59179974814?text=Hello%20I%20want%20to%20book%20Central%20Apartment%20Santa%20Cruz" target="_blank" class="btn-secondary">
+Book via WhatsApp
 </a>
+
+</div>
 
 </div>
 
@@ -111,17 +130,18 @@
 
 </section>
 
-<section id="gallery" class="gallery">
+<section id="gallery">
 
-<h2>Photo Gallery</h2>
+<h2>Apartment Gallery</h2>
 
-<div class="gallery-container">
+<div class="gallery">
 
-<img src="imagenes/apartment.jpeg" class="gallery-img">
-<img src="imagenes/cama.jpg" class="gallery-img">
-<img src="imagenes/entrada.jpg" class="gallery-img">
-<img src="imagenes/banho.jpg" class="gallery-img">
-<img src="imagenes/vistas.jpeg" class="gallery-img">
+
+<img src="imagenes/apartment.jpeg" alt="apartment">
+<img src="imagenes/cama.jpg" alt="Dormitorio">
+<img src="imagenes/entrada.jpg" alt="entrada">
+<img src="imagenes/banho.jpg" alt="Baño">
+<img src="imagenes/vistas.jpeg" alt="Vistas">
 
 </div>
 
@@ -269,6 +289,43 @@ events: []
 });
 
 calendar.render();
+
+});
+
+</script>
+
+<script>
+
+document.querySelectorAll('.gallery img').forEach(img => {
+
+img.addEventListener('click', function(){
+
+const overlay = document.createElement("div");
+
+overlay.style.position="fixed";
+overlay.style.top="0";
+overlay.style.left="0";
+overlay.style.width="100%";
+overlay.style.height="100%";
+overlay.style.background="rgba(0,0,0,0.9)";
+overlay.style.display="flex";
+overlay.style.alignItems="center";
+overlay.style.justifyContent="center";
+
+const bigImg = document.createElement("img");
+
+bigImg.src=this.src;
+bigImg.style.maxWidth="90%";
+bigImg.style.maxHeight="90%";
+bigImg.style.borderRadius="10px";
+
+overlay.appendChild(bigImg);
+
+overlay.onclick=()=>overlay.remove();
+
+document.body.appendChild(overlay);
+
+});
 
 });
 
