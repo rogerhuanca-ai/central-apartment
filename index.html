@@ -3,27 +3,23 @@
 
 <head>
 
-<meta name="description" content="Central Apartment Santa Cruz - Modern holiday apartment in the heart of Santa Cruz. Perfect for city trips, comfortable stay and great location.">
-
-<meta name="keywords" content="apartment santa cruz, holiday apartment santa cruz, central apartment santa cruz, vacation rental santa cruz">
-
-<meta name="author" content="Central Apartment Santa Cruz">
-
-<meta property="og:title" content="Central Apartment Santa Cruz">
-<meta property="og:description" content="Modern apartment in the heart of Santa Cruz. Book directly or through Airbnb and Booking.">
-<meta property="og:type" content="website">
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Central Apartment Santa Cruz | Holiday Apartment in Santa Cruz</title>
+
+<title>Central Apartment Santa Cruz | Holiday Apartment</title>
+
+<meta name="description" content="Central Apartment Santa Cruz - Modern holiday apartment in the heart of Santa Cruz.">
+<meta name="keywords" content="apartment santa cruz, holiday apartment santa cruz, vacation rental santa cruz">
 
 <link rel="stylesheet" href="css/styless.css">
+
+<link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
 
 </head>
 
 <body>
 
-<!-- Header con menú fijo -->
 <header>
 
 <div class="container">
@@ -39,36 +35,30 @@
 <a href="#location">Location</a>
 <a href="#reviews">Reviews</a>
 <a href="#pricing">Prices</a>
+<a href="#calendar-section">Availability</a>
 </nav>
 
 </div>
 
 </header>
 
-<!-- Hero Section -->
 <section id="home" class="hero">
-  <div class="hero-content">
-    <h2>Your stay in the heart of the city</h2>
-    <p>Modern apartment located in Santa Cruz city center.</p>
-    <a href="https://wa.me/59179974814?text=Hello%20I%20want%20to%20book%20Central%20Apartment%20Santa%20Cruz" target="_blank">
-    <button>Book Now</button>
-    </a>
-  </div>
+
+<div class="hero-content">
+
+<h2>Your stay in the heart of the city</h2>
+
+<p>Modern apartment located in Santa Cruz city center.</p>
+
+<a href="https://wa.me/59179974814?text=Hello%20I%20want%20to%20book%20Central%20Apartment%20Santa%20Cruz" target="_blank">
+
+<button>Book Now</button>
+
+</a>
+
+</div>
+
 </section>
-
-<div class="search-box">
-
-<form action="https://www.booking.com" method="get" target="_blank">
-
-<div class="search-field">
-<label>Check-in</label>
-<input type="date" name="checkin">
-</div>
-
-<div class="search-field">
-<label>Check-out</label>
-<input type="date" name="checkout">
-</div>
 
 <div class="search-box">
 
@@ -90,7 +80,6 @@
 <div class="search-buttons">
 
 <button onclick="searchBooking()">Search on Booking</button>
-
 <button onclick="searchAirbnb()">Search on Airbnb</button>
 
 </div>
@@ -144,7 +133,7 @@
 
 <div class="map-container">
 
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3799.4988109645287!2d-63.19715992544021!3d-17.768239174647523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93f1e7822a8b91a9%3A0x19c5858b579e2bc6!2sEdificio%20%22MURURE%22!5e0!3m2!1ses!2ses!4v1773162079029!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<iframe src="https://www.google.com/maps?q=Santa+Cruz+Bolivia&output=embed"></iframe>
 
 </div>
 
@@ -158,20 +147,20 @@
 
 <div class="review">
 <p>★★★★★</p>
-<p>"Fantastic apartment in the city center. Very clean and comfortable."</p>
-<span>- Maria, Spain</span>
+<p>"Fantastic apartment in the city center."</p>
+<span>- Maria</span>
 </div>
 
 <div class="review">
 <p>★★★★★</p>
-<p>"Perfect location and very friendly host. Highly recommended."</p>
-<span>- John, UK</span>
+<p>"Perfect location and very comfortable."</p>
+<span>- John</span>
 </div>
 
 <div class="review">
 <p>★★★★★</p>
-<p>"Beautiful apartment with everything we needed. Will come back!"</p>
-<span>- Anna, Germany</span>
+<p>"Beautiful apartment. Highly recommended."</p>
+<span>- Anna</span>
 </div>
 
 </div>
@@ -184,23 +173,7 @@
 
 <div class="pricing-container">
 
-<div class="price-card">
-<h3>Weekday</h3>
-<p class="price">€80 / night</p>
-<p>Perfect for business trips</p>
-</div>
 
-<div class="price-card featured">
-<h3>Weekend</h3>
-<p class="price">€110 / night</p>
-<p>Ideal for a city getaway</p>
-</div>
-
-<div class="price-card">
-<h3>Weekly Stay</h3>
-<p class="price">€500 / week</p>
-<p>Best value for longer stays</p>
-</div>
 
 </div>
 
@@ -217,68 +190,32 @@ Book on Airbnb
 </a>
 
 <a href="https://www.booking.com/hotel/bo/central-apartment-santa-cruz-bolivia.html" target="_blank" class="booking-button booking">
-Book on Booking.com
+Book on Booking
 </a>
 
 </div>
 
 </section>
 
-<section id="availability" class="calendar">
+<section id="calendar-section">
 
-<h2>Availability</h2>
+<h2>Availability Calendar</h2>
 
-<div class="calendar-container">
-
-<iframe
-src="https://calendar.google.com/calendar/embed?src=tcrf4tvjf80fq40fs2f2fhum59saudg2%40import.calendar.google.com&ctz=Europe%2FMadrid"
-style="border:0"
-width="100%"
-height="600"
-frameborder="0"
-scrolling="no">
-</iframe>
-
-</div>
+<div id="calendar"></div>
 
 </section>
 
-<!-- Footer -->
 <footer>
-  <p>© 2026 Central Apartment Santa Cruz</p>
+
+<p>© 2026 Central Apartment Santa Cruz</p>
+
 </footer>
 
-<a href="https://wa.me/59179974814?text=Hello%20I%20want%20to%20book%20Central%20Apartment%20Santa%20Cruz" 
-class="whatsapp-button" 
-target="_blank">
+<a href="https://wa.me/59179974814" class="whatsapp-button" target="_blank">
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
-alt="WhatsApp">
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
 
 </a>
-
-<div id="lightbox">
-<img id="lightbox-img">
-</div>
-
-<script>
-
-const images = document.querySelectorAll(".gallery-img");
-const lightbox = document.getElementById("lightbox");
-const lightboxImg = document.getElementById("lightbox-img");
-
-images.forEach(img => {
-  img.addEventListener("click", () => {
-    lightbox.style.display = "flex";
-    lightboxImg.src = img.src;
-  });
-});
-
-lightbox.addEventListener("click", () => {
-  lightbox.style.display = "none";
-});
-
-</script>
 
 <script>
 
@@ -288,10 +225,6 @@ const navMenu = document.querySelector(".nav-menu");
 toggle.addEventListener("click", () => {
 navMenu.classList.toggle("active");
 });
-
-</script>
-
-<script>
 
 function searchBooking(){
 
@@ -308,7 +241,6 @@ window.open(bookingURL,"_blank");
 
 }
 
-
 function searchAirbnb(){
 
 const checkin = document.getElementById("checkin").value;
@@ -323,6 +255,22 @@ checkout;
 window.open(airbnbURL,"_blank");
 
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+
+var calendarEl = document.getElementById('calendar');
+
+var calendar = new FullCalendar.Calendar(calendarEl, {
+
+initialView: 'dayGridMonth',
+
+events: []
+
+});
+
+calendar.render();
+
+});
 
 </script>
 

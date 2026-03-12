@@ -434,3 +434,29 @@ cursor:pointer;
 .search-field button:hover {
 background:#ff3b3b;
 }
+
+#calendar-section{
+padding:60px;
+max-width:900px;
+margin:auto;
+}
+
+#calendar{
+margin-top:30px;
+}
+
+#calendar {
+max-width:900px;
+margin:40px auto;
+}
+
+.fc {
+max-width:900px;
+margin:auto;
+}
+
+.map-container iframe{
+width:100%;
+height:450px;
+border:0;
+}
